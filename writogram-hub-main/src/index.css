@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Writogram Brand Colors - Warm Literary Theme */
+    --background: 45 25% 97%;
+    --foreground: 25 35% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 35% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 35% 15%;
+
+    /* Primary: Warm Orange/Terracotta */
+    --primary: 25 85% 55%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 25 95% 65%;
+
+    /* Secondary: Warm Cream/Beige */
+    --secondary: 45 45% 92%;
+    --secondary-foreground: 25 35% 25%;
+
+    --muted: 45 25% 95%;
+    --muted-foreground: 25 15% 55%;
+
+    /* Accent: Rich Book Brown */
+    --accent: 25 25% 85%;
+    --accent-foreground: 25 45% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 45 20% 88%;
+    --input: 45 20% 92%;
+    --ring: 25 85% 55%;
+
+    /* Design System Enhancements */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-warm: linear-gradient(135deg, hsl(25 65% 75%), hsl(45 55% 85%));
+    --shadow-warm: 0 8px 25px -8px hsl(var(--primary) / 0.3);
+    --shadow-soft: 0 4px 15px -4px hsl(25 25% 50% / 0.15);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode - Warm Literary Theme */
+    --background: 25 20% 8%;
+    --foreground: 45 25% 95%;
+
+    --card: 25 25% 12%;
+    --card-foreground: 45 25% 95%;
+
+    --popover: 25 25% 12%;
+    --popover-foreground: 45 25% 95%;
+
+    --primary: 25 85% 55%;
+    --primary-foreground: 25 20% 8%;
+    --primary-glow: 25 95% 65%;
+
+    --secondary: 25 15% 18%;
+    --secondary-foreground: 45 25% 90%;
+
+    --muted: 25 15% 15%;
+    --muted-foreground: 25 10% 65%;
+
+    --accent: 25 20% 22%;
+    --accent-foreground: 45 25% 90%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 15% 20%;
+    --input: 25 15% 18%;
+    --ring: 25 85% 55%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-warm: linear-gradient(135deg, hsl(25 45% 25%), hsl(25 35% 35%));
+    --shadow-warm: 0 8px 25px -8px hsl(var(--primary) / 0.4);
+    --shadow-soft: 0 4px 15px -4px hsl(0 0% 0% / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
